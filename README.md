@@ -13,6 +13,7 @@ Archi is a modern and visually stunning website that aims to highlight the compa
 
 ## Technologies Used
 
+- **ASTRO FRAMEWORK:** Archi is built using the Astro framework, providing a modern and efficient development experience.
 - **HTML5:** Semantic markup for structuring the website's content.
 - **CSS3:** Styling and layout design to create visually appealing interfaces.
 - **JavaScript:** Interactivity and dynamic elements for enhanced user experience.
@@ -24,5 +25,10 @@ To run Archi locally on your machine, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
-  gh repo clone mediocrest-webdev/astro-archi
+   ```bash 
+   gh repo clone mediocrest-webdev/astro-archi
+   
+2. Install Dependencies:
+   ```bash 
+   cd astro-archi
+   npm install

@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// mapping repetitive project items
+const projects = [
+	{src: Project1, alt: 'house-2', date: '2020', title: 'Sweden'},
+	{src: Project3, alt: 'house-3', date: '2022', title:' Paris, France'},
+	{src: Project4, alt: 'house-4', date: '2023', title:' London, UK'},
+	{src: Project2, alt: 'house-5', date: '2024', title:' Manila, Philippines'},
+]
+
+// asset imports
+import { Image } from 'astro:assets';
+import Project1 from "../images/project-image-1.webp";
+import Project2 from "../images/project-image-2.webp";
+import Project3 from "../images/project-image-3.webp";
+import Project4 from "../images/project-image-4.webp";
+---
+
+<Layout title="ARCHI.">
+	<main>
+		<!-- Hero -->
+		<header class="hero">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<h1>
+							We specialize in crafting architectural designs, landscaping concepts, interior layouts, product and graphic designs.
+			  			</h1>
+					</div>
+					<div class="col-lg-6"></div>
+				</div>
+			</div>
+		</header>  
+		<!-- Hero -->
+
+	  	<!-- About -->
+		  <section class="about" id="about">
+			<div class="container">
+			  <h1>About</h1>
+			  <hr />
+			  <div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-5 mb-4">
+				  <p>Introducing Archi: Your premier destination for architectural innovation. From conceptualization to execution, we specialize in crafting awe-inspiring spaces that seamlessly blend creativity with functionality. With a commitment to excellence and a passion for design, Archi is your trusted partner in bringing your architectural visions to life. Join us in shaping the world around us, one masterpiece at a time. Welcome to Archi, where imagination meets structure.</p>
+				</div>
+				<div class="col-lg-5">
+				  <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class='w-100 h-auto' alt="house-1">
+				</div>
+			  </div>
+			</div>
+		  </section>
+	  	<!-- About -->
+
+		  <!-- Projects -->
+		  <section class="projects" id="projects">
+			<div class="container">
+			  <h1>Projects</h1>
+			  
+			  <hr />
+
+				<div class="row justify-content-end ">
+			  		{projects.map((project) =>(		
+					<div class="col-lg-5 mb-4">
+						<Image src={project.src} class="w-100 h-auto" alt={project.alt} />
+						<p class="text-muted pt-1"><small>{project.date}</small></p>
+						<p>{project.title}</p>
+					</div>))}
+				</div>
+			</div>
+		  </section>
+		  <!-- Projects -->
+	</main>
+</Layout>
+
+<style>
+	.hero {
+	  background-image: url(https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  padding: clamp(100px, 10vw, 150px) 0;
+	}
+  </style>
+
+  <script>
+
+  </script>

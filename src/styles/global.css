@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Inter';
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Links and Lists Styling */
+li,
+a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline 2px solid black;
+}
+
+/* Typography Styling */
+p{
+    text-wrap: balance;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Spacing Between Sections */
+section{
+    margin-top: 80px;
+}
+
+footer{
+    margin-top: 80px;
+}
+
+/* Component Styles */
+hr{
+    border: 1px solid black;
+}

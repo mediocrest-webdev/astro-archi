@@ -32,11 +32,11 @@ p{
 
 /* Spacing Between Sections */
 section{
-    padding: 80px;
+    padding-top: 80px;
 }
 
 footer{
-    padding: 80px;
+    padding-top: 80px;
 }
 
 /* Component Styles */

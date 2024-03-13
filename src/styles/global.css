@@ -20,23 +20,30 @@ a{
     color: black;
 }
 a:hover{
-    text-decoration: underline 2px solid black;
+    text-decoration: underline 1px solid black;
+    color: black;
 }
 
 /* Typography Styling */
+h2,h3,h4,h5,h6{
+    font-weight: 300;
+    line-height: 2;
+}
+
 p{
     text-wrap: balance;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: min(1rem, 1.5rem);
+    font-weight: normal;
+    line-height: 1.8;
 }
 
 /* Spacing Between Sections */
 section{
-    padding-top: 80px;
+    padding-top: 8%;
 }
 
 footer{
-    margin-top: 80px;
+    margin-top: 8%;
 }
 
 /* Component Styles */

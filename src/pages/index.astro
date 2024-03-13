@@ -11,21 +11,27 @@ const projects = [
 
 // asset imports
 import { Image } from 'astro:assets';
+
+import Archi from "/public/hero-image.webp"
 import Project1 from "../images/project-image-1.webp";
 import Project2 from "../images/project-image-2.webp";
 import Project3 from "../images/project-image-3.webp";
 import Project4 from "../images/project-image-4.webp";
+
+import Service1 from "../images/carousel-image-1.webp";
+import Service2 from "../images/carousel-image-2.webp";
+import Service3 from "../images/carousel-image-3.webp";
 ---
 
 <Layout title="ARCHI.">
+	<!-- Hero -->
 	<main>
-		<!-- Hero -->
 		<header class="hero">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
 						<h1>
-							We specialize in crafting architectural designs, landscaping concepts, interior layouts, product and graphic designs.
+							We specialize in architectural designs, landscaping concepts, interior layouts, product & graphic designs.
 			  			</h1>
 					</div>
 					<div class="col-lg-6"></div>
@@ -37,15 +43,16 @@ import Project4 from "../images/project-image-4.webp";
 	  	<!-- About -->
 		  <section class="about" id="about">
 			<div class="container">
-			  <h1>About</h1>
+			  <h2>About</h2>
 			  <hr />
+
 			  <div class="row">
 				<div class="col-lg-2"></div>
-				<div class="col-lg-5 mb-4">
+				<div class="col-lg-5 mb-4 mb-lg-0 align-items-center ">
 				  <p>Introducing Archi: Your premier destination for architectural innovation. From conceptualization to execution, we specialize in crafting awe-inspiring spaces that seamlessly blend creativity with functionality. With a commitment to excellence and a passion for design, Archi is your trusted partner in bringing your architectural visions to life. Join us in shaping the world around us, one masterpiece at a time. Welcome to Archi, where imagination meets structure.</p>
 				</div>
-				<div class="col-lg-5">
-				  <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class='w-100 h-auto' alt="house-1">
+				<div class="col-lg-5 mb-4 mb-lg-0">
+				  <Image src={Archi} class='img-fluid' alt="Archi building image" loading="lazy" decoding="async">
 				</div>
 			  </div>
 			</div>
@@ -55,35 +62,87 @@ import Project4 from "../images/project-image-4.webp";
 		  <!-- Projects -->
 		  <section class="projects" id="projects">
 			<div class="container">
-			  <h1>Projects</h1>
-			  
-			  <hr />
-
+				<h2>Projects</h2>
+				<hr />
+				
 				<div class="row justify-content-end ">
 			  		{projects.map((project) =>(		
 					<div class="col-lg-5 mb-4">
-						<Image src={project.src} class="w-100 h-auto" alt={project.alt} />
-						<p class="text-muted pt-1"><small>{project.date}</small></p>
+						<Image src={project.src} class="w-100 h-auto" alt={project.alt} loading="lazy" decoding="async"/>
+						<p class="text-muted pt-1 mb-0"><small>{project.date}</small></p>
 						<p>{project.title}</p>
 					</div>))}
 				</div>
 			</div>
-		  </section>
-		  <!-- Projects -->
+		</section>
+		<!-- Projects -->
+
+		<!-- Services -->
+		<section class="services" id="services">
+		  <div class="container">
+			  <h2>Services</h2>
+			  <hr>
+	
+			  <div class="row">
+				  <div class="col-lg-2"></div>
+				  <div class="col-lg-5 mb-4">
+					  <h4>Architectural Designs</h4>
+					  <h4>Landscaping Concepts</h4>
+					  <h4>Interior Layouts</h4>
+					  <h4>Product & Graphic Designs.</h4>
+				  </div>
+				  <div class="col-lg-5">
+					<div id="carouselExampleFade" class="carousel slide carousel-fade mb-4 mb-lg-0" data-bs-ride="carousel">
+						<div class="carousel-inner">
+						  <div class="carousel-item active" data-bs-interval="2000ms" >
+							<Image src={Service1} class="d-block w-100 h-auto" alt="carousel image 1" loading="lazy" decoding="async">
+						  </div>
+						  <div class="carousel-item" data-bs-interval="2000ms" >
+							<Image src={Service2} class="d-block w-100 h-auto" alt="carousel image 2" loading="lazy" decoding="async">
+						  </div>
+						  <div class="carousel-item" data-bs-interval="2000ms" >
+							<Image src={Service3} class="d-block w-100 h-auto" alt="carousel image 3" loading="lazy" decoding="async">
+						  </div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						  <span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+						  <span class="visually-hidden">Next</span>
+						</button>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+		</section>
 	</main>
+	<!-- Services -->
 </Layout>
 
 <style>
-	.hero {
-	  background-image: url(https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-	  background-attachment: fixed;
-	  background-position: center;
-	  background-size: cover;
-	  background-repeat: no-repeat;
-	  padding: clamp(100px, 10vw, 150px) 0;
+	@media screen and (min-width:601px) {
+		.hero {
+	  		background-image: url("/hero-image.webp");
+	  		background-attachment: fixed;
+	  		background-position: center;
+	  		background-size: cover;
+	  		background-repeat: no-repeat;
+	  		padding: clamp(100px, 10vw, 150px) 0;
+		}
+
+	}
+	
+	@media screen and (max-width:600px) {
+		.hero {
+	  		background-image: url("/hero-image-mobile.webp");
+			background-attachment: fixed;
+	  		background-position: center;
+	  		background-size: cover;
+	  		background-repeat: no-repeat;
+	  		padding: clamp(100px, 10vw, 150px) 0;
+		}
+		
 	}
   </style>
-
-  <script>
-
-  </script>

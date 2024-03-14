@@ -12,6 +12,8 @@ const projects = [
 // asset imports
 import { Image } from 'astro:assets';
 
+import ArrowUp from "/public/ph_arrow-up-light.svg"
+
 import Archi from "/public/hero-image.webp"
 import Project1 from "../images/project-image-1.webp";
 import Project2 from "../images/project-image-2.webp";
@@ -24,8 +26,16 @@ import Service3 from "../images/carousel-image-3.webp";
 ---
 
 <Layout title="ARCHI.">
-	<!-- Hero -->
 	<main>
+		<!-- Scroll to top -->
+		<div class="scroll-to-top">
+			<a href="#" class="position-fixed d-none d-lg-block bottom-0 end-0 bg-light rounded-5 p-2 m-2">
+				<Image src={ArrowUp} alt="Thin black arrow up"/>
+			</a>
+		</div>
+		<!-- Scroll to top -->
+
+		<!-- Hero -->
 		<header class="hero">
 			<div class="container">
 				<div class="row">
@@ -86,10 +96,10 @@ import Service3 from "../images/carousel-image-3.webp";
 			  <div class="row">
 				  <div class="col-lg-2"></div>
 				  <div class="col-lg-5 mb-4">
-					  <h4>Architectural Designs</h4>
-					  <h4>Landscaping Concepts</h4>
-					  <h4>Interior Layouts</h4>
-					  <h4>Product & Graphic Designs.</h4>
+					  <h3>Architectural Designs</h3>
+					  <h3>Landscaping Concepts</h3>
+					  <h3>Interior Layouts</h3>
+					  <h3>Product & Graphic Designs</h3>
 				  </div>
 				  <div class="col-lg-5">
 					<div id="carouselExampleFade" class="carousel slide carousel-fade mb-4 mb-lg-0" data-bs-ride="carousel">
@@ -117,8 +127,8 @@ import Service3 from "../images/carousel-image-3.webp";
 			  </div>
 		  </div>
 		</section>
+		<!-- Services -->
 	</main>
-	<!-- Services -->
 </Layout>
 
 <style>
@@ -143,6 +153,5 @@ import Service3 from "../images/carousel-image-3.webp";
 	  		background-repeat: no-repeat;
 	  		padding: clamp(100px, 10vw, 150px) 0;
 		}
-		
 	}
   </style>

@@ -10,6 +10,7 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-size: 1rem;
 }
 
 /* Links and Lists Styling */
@@ -25,16 +26,17 @@ a:hover{
 }
 
 /* Typography Styling */
-h2,h3,h4,h5,h6{
-    font-weight: 300;
-    line-height: 2;
+h1,h2,h3,h4,h5,h6{
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -.1rem;
 }
 
 p{
-    text-wrap: balance;
-    font-size: min(1rem, 1.5rem);
-    font-weight: normal;
-    line-height: 1.8;
+    font-size: min(.9rem, 1rem);
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0;
 }
 
 /* Spacing Between Sections */

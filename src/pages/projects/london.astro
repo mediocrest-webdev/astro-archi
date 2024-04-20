@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import { Image } from 'astro:assets';
+
+import Project3 from "../../images/project-image-3.webp"
+---
+<Layout title="Project | London">
+    <main class="london" id="london">
+        <div class="container">
+            <Image src={Project3} alt="white modern house" class="[ project-3 ] img-fluid"/>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .project-3{
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+	  	background-repeat: no-repeat;
+    }
+</style>

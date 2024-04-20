@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import { Image } from 'astro:assets';
+
+import Project1 from "../../images/sweden.webp"
+---
+<Layout title="Project | Sweden">
+    <main class="sweden" id="sweden">
+        <div class="container">
+            <Image src={Project1} alt="white modern house" class="[ project-1 ] img-fluid"/>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .project-1{
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+	  	background-repeat: no-repeat;
+    }
+</style>

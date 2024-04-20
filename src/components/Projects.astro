@@ -1,0 +1,14 @@
+---
+import { projects } from "../data/project.json";
+import ProjectsList from "../components/ProjectsList.astro";
+---
+
+<section class="projects" id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <hr />
+        <div class="row justify-content-end">
+            {projects.map((project) => <ProjectsList {...project} />)}
+        </div>
+    </div>
+</section>

@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-*{
+*
+{
     box-sizing: border-box;
     font-family: 'Inter';
     scroll-behavior: smooth;
 }
 
-body{
+body
+{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -15,24 +17,52 @@ body{
 
 /* Links and Lists Styling */
 li,
-a{
+a
+{
     list-style: none;
     text-decoration: none;
     color: black;
+    font-weight: 300;
+    
 }
-a:hover{
+
+a:hover
+{
     text-decoration: underline 1px solid black;
     color: black;
 }
 
 /* Typography Styling */
-h1,h2,h3,h4,h5,h6{
+h1
+{
+    font-size: clamp(2rem, 1.296rem + 1.878vw, 2.986rem);
     font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: -.1rem;
 }
 
-p{
+h2
+{
+    font-size: clamp(1.8rem, 1.309rem + 1.31vw, 2.488rem);
+    font-weight: 400;
+}
+
+h3
+{
+    font-size: clamp(1.4rem, 0.919rem + 1.284vw, 2.074rem);
+    font-weight: 300;
+}
+
+
+h1,
+h2,
+h3
+{
+    line-height: 1.1;
+    letter-spacing: -.06rem;
+}
+
+p
+{
+    text-wrap: balance;
     font-size: min(1rem, 1.5rem);
     font-weight: 300;
     line-height: 1.5;
@@ -40,15 +70,13 @@ p{
 }
 
 /* Spacing Between Sections */
-section{
-    padding-top: 8%;
-}
-
-footer{
-    margin-top: 8%;
+section
+{
+    padding-top: 4em;
 }
 
 /* Component Styles */
-hr{
+hr
+{
     border: 1px solid black;
 }

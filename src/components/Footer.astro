@@ -1,10 +1,10 @@
 ---
-const {title} = Astro.props
+const { title } = Astro.props;
 ---
 
 <footer class="footer w-100 py-4">
     <div class="container">
-        <div class="row gap-2 gap-lg-0 ">
+        <div class="row gap-2 gap-lg-0">
             <div class="col-lg-2">
                 <a href="/"><p>{title}</p></a>
             </div>
@@ -13,6 +13,8 @@ const {title} = Astro.props
                     <li class="mb-2">Navigation Links</li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-4 mb-2 mb-lg-0">
@@ -26,8 +28,18 @@ const {title} = Astro.props
             <div class="col-lg-4 col-md-3 flex text-uppercase">
                 <ul class="ps-0 text-uppercase">
                     <li class="mb-2">Credits</li>
-                    <li>Design inspired by <a href="https://www.behance.net/gallery/111672693/Snoehetta-website-redesgn" target="_blank"> Maxim Soloninkin</a></li>
-                    <li><a href="https://github.com/mediocrest-webdev" target="_blank">© 2024 Chris Flores</a></li>
+                    <li>
+                        Design inspired by <a
+                            href="https://www.behance.net/gallery/111672693/Snoehetta-website-redesgn"
+                            target="_blank"
+                        >
+                            Maxim Soloninkin</a>
+                    </li>
+                    <li>
+                        <a
+                            href="mailto:mediocrestdev@gmail.com"
+                            >© 2024 Chris Flores</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -35,7 +47,8 @@ const {title} = Astro.props
 </footer>
 
 <style>
-    footer{
+    footer {
+        margin-top: 4em;
         border-top: 1px solid black;
     }
 </style>

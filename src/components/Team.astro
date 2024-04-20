@@ -1,0 +1,15 @@
+---
+import { teams } from "../data/team.json";
+import TeamList from "../components/TeamList.astro";
+
+---
+<section class="team" id="team">
+    <div class="container">
+        <h2>Our Team</h2>
+        <hr>
+
+    <div class="row justify-content-end">
+        {teams.map((team) => <TeamList {...team} />)}
+    </div>
+    </div>
+</section>

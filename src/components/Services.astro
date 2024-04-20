@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+
+import Service1 from "../images/carousel-image-1.webp";
+import Service2 from "../images/carousel-image-2.webp";
+import Service3 from "../images/carousel-image-3.webp";
+---
+<section class="services" id="services">
+    <div class="container">
+        <h2>Services</h2>
+        <hr>
+
+        <div class="row align-items-center">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5 mt-3 order-2 order-lg-0">
+                <h3 class="fw-light">Architectural Designs</h3>
+                <h3 class="fw-light">Landscaping Concepts</h3>
+                <h3 class="fw-light">Interior Layouts</h3>
+            </div>
+            <div class="col-lg-5">
+              <div id="carouselExampleFade" class="carousel slide carousel-fade mb-4 mb-lg-0" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="1500ms" >
+                      <Image src={Service1} class="d-block w-100 h-auto" alt="carousel image 1" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1500ms" >
+                      <Image src={Service2} class="d-block w-100 h-auto" alt="carousel image 2" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1500ms" >
+                      <Image src={Service3} class="d-block w-100 h-auto" alt="carousel image 3" loading="lazy" decoding="async"/>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>

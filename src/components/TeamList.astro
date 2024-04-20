@@ -1,0 +1,20 @@
+---
+const { src, alt, name, position } = Astro.props;
+
+// asset import
+import { Image } from "astro:assets";
+---
+<div class="col-md-6 col-lg-5 mb-4">
+    <Image
+        src={src}
+        class="w-100 h-auto mb-2"
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        style="object-fit: cover"
+    />
+    <div class="d-flex justify-content-between">
+        <p>{name}</p>
+        <p class="border border-dark rounded-5 px-2">{position}</p>
+    </div>
+</div>

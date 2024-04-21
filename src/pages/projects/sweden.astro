@@ -3,11 +3,19 @@ import Layout from "../../layouts/Layout.astro"
 import { Image } from 'astro:assets';
 
 import Project1 from "../../images/sweden.webp"
+import ProjectDescriptions from "../../components/ProjectDescriptions.astro";
 ---
 <Layout title="Project | Sweden">
     <main class="sweden" id="sweden">
         <div class="container">
             <Image src={Project1} alt="white modern house" class="[ project-1 ] img-fluid"/>
+
+            <ProjectDescriptions 
+                projectDetails="Nestled amidst the serene landscapes of Sweden, this Nordic Retreat embodies modern Scandinavian design principles. Featuring clean lines, minimalist aesthetics, and ample natural light, the residence seamlessly integrates with its surroundings. ARCHI's architectural design focuses on maximizing space efficiency while maintaining a connection to nature. The interior layout exudes warmth and simplicity, with bespoke furnishings complementing the clean architectural lines. Outside, a thoughtfully planned landscaping concept embraces the natural beauty of the Nordic countryside, creating a tranquil oasis for residents to unwind." 
+                location="Stockholm, Sweden" 
+                projectType="Residential" 
+                projectDuration="2012-2015"/>
+
             <div class="d-flex justify-content-between mt-2">
                 <a href="/" class=" border border-dark rounded-5 px-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M5.79889 24H41.7989"></path><path d="M17.7988 36L5.79883 24L17.7988 12"></path></g></svg> Back</a>
                 <a href="/projects/france" class=" border border-dark rounded-5 px-2">Next <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M41.9999 24H5.99994"></path><path d="M30 12L42 24L30 36"></path></g></svg></a>

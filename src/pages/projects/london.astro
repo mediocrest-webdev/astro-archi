@@ -3,11 +3,19 @@ import Layout from "../../layouts/Layout.astro"
 import { Image } from 'astro:assets';
 
 import Project3 from "../../images/project-image-3.webp"
+import ProjectDescriptions from "../../components/ProjectDescriptions.astro";
 ---
 <Layout title="Project | London">
     <main class="london" id="london">
         <div class="container">
             <Image src={Project3} alt="white modern house" class="[ project-3 ] img-fluid"/>
+
+            <ProjectDescriptions 
+                projectDetails="Welcome to London's Urban Oasis, a dynamic commercial space designed to inspire creativity and collaboration. ARCHI's architectural design reimagines traditional London architecture with a contemporary twist, incorporating sleek lines and innovative spatial solutions. Inside, the interior layout fosters productivity and comfort, with flexible workspaces and vibrant communal areas. The landscaping concept extends the urban oasis concept outdoors, with green rooftops, lush vertical gardens, and inviting outdoor seating areas providing a refreshing retreat amidst the bustling cityscape." 
+                location="London, United Kingdom" 
+                projectType="Commercial" 
+                projectDuration="2018-2021"/>
+
             <div class="d-flex justify-content-between mt-2">
                 <a href="/projects/france" class=" border border-dark rounded-5 px-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M5.79889 24H41.7989"></path><path d="M17.7988 36L5.79883 24L17.7988 12"></path></g></svg> Previous</a>
                 <a href="/projects/philippines" class=" border border-dark rounded-5 px-2">Next <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M41.9999 24H5.99994"></path><path d="M30 12L42 24L30 36"></path></g></svg></a>

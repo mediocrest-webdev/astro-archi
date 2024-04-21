@@ -58,6 +58,7 @@ h3
 {
     line-height: 1.1;
     letter-spacing: -.06rem;
+    text-wrap: balance;
 }
 
 p

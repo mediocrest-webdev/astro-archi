@@ -1,0 +1,22 @@
+---
+const { projectDetails, location, projectType, projectDuration} = Astro.props;
+---
+
+<h2 class="mt-5">About</h2>
+<hr />
+
+<div class="row mb-4">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <h3 class="fw-light">{projectDetails}</h3>
+    </div>
+</div>
+
+<h2>Info</h2>
+<hr />
+<p><span class="fw-semibold">Location:</span> {location}</p>
+<hr />
+<p><span class="fw-semibold">Project Type:</span> {projectType}</p>
+<hr />
+<p><span class="fw-semibold">Project Duration:</span> {projectDuration}</p>
+<hr />

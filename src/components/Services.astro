@@ -1,4 +1,6 @@
 ---
+import ServicesAccordion from  "../components/ServicesAccordion.astro"
+
 import { Image } from 'astro:assets';
 
 import Service1 from "../images/carousel-image-1.webp";
@@ -10,12 +12,10 @@ import Service3 from "../images/carousel-image-3.webp";
         <h2>Services</h2>
         <hr>
 
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-lg-2"></div>
             <div class="col-lg-5 mt-3 order-2 order-lg-0">
-                <h3 class="fw-light">Architectural Designs</h3>
-                <h3 class="fw-light">Landscaping Concepts</h3>
-                <h3 class="fw-light">Interior Layouts</h3>
+                <ServicesAccordion />
             </div>
             <div class="col-lg-5">
               <div id="carouselExampleFade" class="carousel slide carousel-fade mb-4 mb-lg-0" data-bs-ride="carousel">

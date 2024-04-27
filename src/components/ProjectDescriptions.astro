@@ -1,24 +1,23 @@
 ---
-const { projectDetails, location, projectType, projectDuration} = Astro.props;
+const { projectDetails, location, projectType, projectDuration } = Astro.props;
 ---
-<div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-    <h2 class="mt-5">About</h2>
-    <hr />
-</div>
 
-<div class="row mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+<h3 class="mt-5">About</h3>
+<hr />
+
+<div class="row mb-4">
     <div class="col-lg-2"></div>
     <div class="col-lg-8">
-        <h3 class="fw-light">{projectDetails}</h3>
+        <h4 class="fw-light">{projectDetails}</h4>
     </div>
 </div>
-<div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-    <h2>Info</h2>
-    <hr />
-    <p><span class="fw-semibold">Location:</span> {location}</p>
-    <hr />
-    <p><span class="fw-semibold">Project Type:</span> {projectType}</p>
-    <hr />
-    <p><span class="fw-semibold">Project Duration:</span> {projectDuration}</p>
-    <hr />
-</div>
+
+<h3>Info</h3>
+<hr />
+
+<p>Location: {location}</p>
+<hr />
+<p>Project Type: {projectType}</p>
+<hr />
+<p>Project Duration: {projectDuration}</p>
+<hr />

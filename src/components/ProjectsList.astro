@@ -4,7 +4,7 @@ const { link, src, alt, date, title } = Astro.props;
 // asset import
 import { Image } from "astro:assets";
 ---
-
+<!-- List of Projects in Projects Section -->
 <div class="col-md-6 col-lg-5 mb-4">
         <Image
             src={src}
@@ -20,6 +20,15 @@ import { Image } from "astro:assets";
             </p>
             <p>{title}</p>
         </div>
-        <a href={link} class="btn btn-sm btn-outline-dark rounded-5">VIEW PROJECT<svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 24"><path fill="none" stroke="#474747" stroke-linecap="round" stroke-linejoin="round" d="M7 7h10m0 0v10m0-10L7 17"></path></svg></a>
+        <a href={link} class="btn btn-sm btn-outline-dark rounded-circle" data-bs-toggle="tooltip" data-bs-title="View Project"  data-bs-placement="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 24"><path fill="none" stroke="#474747" stroke-linecap="round" stroke-linejoin="round" d="M7 7h10m0 0v10m0-10L7 17"></path></svg></a>
     </div>
 </div>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+</script>

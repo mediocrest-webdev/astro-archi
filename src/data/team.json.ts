@@ -1,3 +1,5 @@
+// Team Data
+
 export const teams = [
     {
         src: import('../images/team-member (1).webp'),

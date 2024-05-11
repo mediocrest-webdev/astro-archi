@@ -3,7 +3,6 @@ import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import "../styles/global.css";
-import Lenis from "lenis";
 
 const { title } = Astro.props;
 ---
@@ -80,18 +79,12 @@ const { title } = Astro.props;
       rel="manifest"
       href="/site.webmanifest"
     />
-
-    <!-- Animate on scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" rel="preload" as="style" media="screen">
-
-    <!-- Page Transitions -->
-    <ViewTransitions />
     <title>{title}</title>
   </head>
 
   <body>
     <Navbar title="ARCHI." />
-    <slot transition:animate="fade"/>
+    <slot />
     <Footer title="ARCHI." />
 
     <!-- Bootstrap Scripts -->
@@ -116,20 +109,5 @@ const { title } = Astro.props;
       async="false"
       defer
     ></script>
-
-    <script is:inline>
-      const lenis = new Lenis();
-
-      lenis.on("scroll", (e) => {
-        console.log(e);
-      });
-
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
-    </script>
   </body>
 </html>

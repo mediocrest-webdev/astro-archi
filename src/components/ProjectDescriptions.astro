@@ -2,22 +2,26 @@
 const { projectDetails, location, projectType, projectDuration } = Astro.props;
 ---
 <!-- Descriptions of Projects -->
-<h3 class="mt-5">About</h3>
-<hr />
-
-<div class="row mb-4">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-8">
-        <h4 class="fw-light">{projectDetails}</h4>
+<section>
+    <h3 class="mt-5">About</h3>
+    <hr />
+    
+    <div class="row mb-4">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h4 class="fw-light">{projectDetails}</h4>
+        </div>
     </div>
-</div>
+</section>
 
-<h3>Info</h3>
-<hr />
-
-<p>Location: {location}</p>
-<hr />
-<p>Project Type: {projectType}</p>
-<hr />
-<p>Project Duration: {projectDuration}</p>
-<hr />
+<section>
+    <h3>Info</h3>
+    <hr />
+    
+    <p>Location: {location}</p>
+    <hr />
+    <p>Project Type: {projectType}</p>
+    <hr />
+    <p>Project Duration: {projectDuration}</p>
+    <hr />
+</section>

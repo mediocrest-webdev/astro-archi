@@ -20,6 +20,31 @@
     src: url('/fonts/inter-tight-v7-latin-500.woff2') format('woff2'); 
   }
 
+  :root{
+    --text: hsl(114, 29%, 7%);
+    --background: hsl(0, 0%, 100%);
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
 
 *
 {
@@ -34,6 +59,7 @@ body
     padding: 0;
     overflow-x: hidden;
     font-size: 1rem;
+    background-color: var(--background) !important;
 }
 
 /* Links and Lists Styling */
@@ -42,7 +68,7 @@ a
 {
     list-style: none;
     text-decoration: none;
-    color: black;
+    color: var(--text);
     font-weight: 300;
     
 }
@@ -76,8 +102,8 @@ h1,
 h2,
 h3
 {
-    line-height: 1.1;
-    /* letter-spacing: -.05rem; */
+    line-height: 100%;
+    letter-spacing: -5%;
     text-wrap: balance;
 }
 
@@ -86,13 +112,15 @@ p
     text-wrap: balance;
     font-size: min(1rem, 1.5rem);
     font-weight: 200;
-    line-height: 1.5;
+    line-height: 120%;
+    color: var(--text);
+    letter-spacing: 0%;
 }
 
 /* Spacing Between Sections */
 section
 {
-    padding-top: 12%;
+    padding-top: 10%;
 }
 
 /* Component Styles */
